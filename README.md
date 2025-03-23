@@ -1,36 +1,186 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WeTube - Movie Discovery Platform
 
-## Getting Started
+![WeTube Logo](public/logo.png)
 
-First, run the development server:
+WeTube is a modern movie discovery platform built with Next.js, featuring real-time recommendations, vector search, and an interactive user interface powered by KendoUI components.
+
+## 🌟 Features
+
+- **Advanced Search Capabilities**
+  - Vector-based similarity search
+  - Real-time movie recommendations
+  - Full-text search with MongoDB
+
+- **Modern UI Components**
+  - Responsive design with KendoUI React components
+  - Infinite scroll for movie listings
+  - Skeleton loading states
+  - Mobile-first approach
+
+- **Performance Optimized**
+  - Server-side rendering with Next.js
+  - Image optimization
+  - Caching strategies
+  - MongoDB vector search integration
+
+- **Accessibility**
+  - WCAG 2.1 compliant
+  - Keyboard navigation support
+  - Screen reader friendly
+  - Semantic HTML structure
+
+## 🚀 Tech Stack
+
+- **Frontend**
+  - Next.js 15.2
+  - React 19
+  - KendoUI React Components
+  - TailwindCSS
+
+- **Backend**
+  - MongoDB with Vector Search
+  - Google Gemini AI
+  - Langchain
+  - Upstash Redis
+
+- **Testing**
+  - Playwright for E2E testing
+  - Axe for accessibility testing
+
+## 📋 Prerequisites
+
+- Node.js 18.x or higher
+- MongoDB Atlas account with Vector Search enabled
+- Google AI API key
+- Upstash Redis account
+
+## 🛠️ Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/wetube.git
+   cd wetube
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   bun install
+   ```
+
+3. **Environment Setup**
+   Create a `.env` file in the root directory:
+   ```env
+   MONGODB_URI=your_mongodb_uri
+   GOOGLE_API_KEY=your_google_ai_api_key
+   UPSTASH_REDIS_URL=your_redis_url
+   UPSTASH_REDIS_TOKEN=your_redis_token
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   bun dev
+   ```
+
+## 🧪 Testing
+
+The project includes comprehensive testing setup:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Run all tests
+npm test
+
+# Run tests with UI
+npm run test:ui
+
+# Debug tests
+npm run test:debug
+
+# View test reports
+npm run test:report
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Test Coverage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Integration tests for all pages
+- Accessibility compliance testing
+- Cross-browser compatibility
+- Mobile responsiveness
+- API integration tests
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+wetube/
+├── app/                    # Next.js app directory
+│   ├── movie/             # Movie details pages
+│   ├── search/            # Search results pages
+│   └── page.tsx           # Home page
+├── components/            # React components
+├── lib/                   # Utility functions and actions
+│   ├── actions/           # Server actions
+│   └── mongodb.ts         # Database configuration
+├── public/                # Static assets
+├── tests/                # Test files
+│   ├── home.spec.ts
+│   ├── movie-details.spec.ts
+│   ├── search.spec.ts
+│   └── accessibility.spec.ts
+└── types/                # TypeScript type definitions
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🔄 API Routes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `GET /api/movies` - Fetch paginated movie listings
+- `GET /api/movies/search` - Search movies
+- `GET /api/movies/:id` - Get movie details
+- `POST /api/movies/:id/comments` - Add movie comments
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Deployment
 
-## Deploy on Vercel
+The application is optimized for deployment on Vercel:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Connect your GitHub repository to Vercel
+2. Configure environment variables
+3. Deploy with `vercel deploy`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📈 Performance Optimization
+
+- Implemented caching strategies
+- Optimized images with Next.js Image component
+- MongoDB indexing for faster queries
+- Client-side caching for recommendations
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## 👏 Acknowledgments
+
+- [Next.js](https://nextjs.org/) for the amazing framework
+- [KendoUI](https://www.telerik.com/kendo-react-ui/) for the UI components
+- [MongoDB](https://www.mongodb.com/) for vector search capabilities
+- [Google Gemini](https://ai.google.dev/) for AI features
+
+## 📞 Support
+
+For support, email support@wetube.com or join our Slack channel.
+
+---
+
+Built with ❤️ by [Your Name]

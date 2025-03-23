@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import "tailwindcss";
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --text-muted: #595959;
+  --focus-ring: #2563eb;
 }
 
 @theme inline {
@@ -12,15 +14,81 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.lobster{
+  font-family: 'Lobster', cursive!important;
+  font-weight: bold!important;
+}
+.container {
+  width: 100%;
+  max-width: 1200px; /* Limit maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
+  padding: 10px 20px; /* Add padding for smaller screens */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px; /* Reduce padding on mobile */
+  }
+}
+
+.scroller-container::-webkit-scrollbar {
+  width: 5px;
+}
+.scroller-container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.scroller-container::-webkit-scrollbar-thumb {
+  background-color: #ff6358;
+  border-radius: 10px;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Improved color contrast for text */
+.text-gray-600 {
+  color: var(--text-muted);
+}
+
+/* Improved button focus states */
+button:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Improved link focus states */
+a:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Ensure sufficient color contrast for interactive elements */
+.k-button.k-primary {
+  background-color: #2563eb;
+  color: white;
 }
