@@ -43,11 +43,11 @@ const MovieCard: FC<Partial<Movie>> = ({ Poster, Title, Language, Country }) => 
         <div className="sr-only">Movie poster for {Title}</div>
       </div>
       <CardFooter className='flex flex-col gap-2'>
-        <h2 className="font-bold text-lg">{Title}</h2>
-        <div className="flex justify-between text-sm text-gray-600">
+        <h2 className="font-bold text-base truncate">{Title}</h2>
+        <p className="flex text-sm text-gray-600 truncate">
           <span>{Language}</span>
           <span>{Country}</span>
-        </div>
+        </p>
       </CardFooter>
     </Card>
   )
