@@ -14,7 +14,7 @@ interface Props {
 }
 
 // Generate metadata for SEO
-export const generateMetadata = async ({ params }: Props): Promise<Metadata> =>{
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const { id } = await params
     const title = decodeURIComponent(id)
@@ -43,15 +43,12 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> =>{
   }
 }
 
-
 const MovieWithRecommendations = async ({ params }: Props) => {
   const { id } = await params
   const title = decodeURIComponent(id)
   const starTimer = performance.now()
-  // console.log('Title',title)
   const movie = await getRecommendedMovies(title)
   const endTimer = performance.now()
-  // console.log(movie)
   console.log(`Time taken to get movie: ${(endTimer - starTimer)/1000}s`)
 
   if (!movie || movie.length === 0) {
@@ -91,7 +88,7 @@ const MovieWithRecommendations = async ({ params }: Props) => {
   )
 }
 
-const Page = async ({params }: Props)=> {
+export default async function Page({ params }: Props) {
  return(
   <main className="container mx-auto px-4 py-8 !mt-3" aria-label="Movie page">
   <Suspense fallback={<RecommendationPlaceHolder/>}>
@@ -100,5 +97,3 @@ const Page = async ({params }: Props)=> {
   </main>
  )
 }
-
-export default Page  
