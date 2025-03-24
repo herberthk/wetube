@@ -94,7 +94,7 @@ WeTube is a modern movie discovery platform built with Next.js, featuring real-t
    # or
    yarn dev
    # or
-   bun dev
+   bun run dev
    ```
 
 ## 🧪 Testing
@@ -103,16 +103,16 @@ The project includes comprehensive testing setup:
 
 ```bash
 # Run all tests
-npm test
+bun run test
 
 # Run tests with UI
-npm run test:ui
+bun run test:ui
 
 # Debug tests
-npm run test:debug
+bun run test:debug
 
 # View test reports
-npm run test:report
+bun run test:report
 ```
 
 ### Test Coverage
