@@ -1,8 +1,17 @@
 # WeTube - Movie Discovery Platform
 
-![WeTube Logo](public/logo.png)
+![WeTube Logo](./logo.png)
 
 WeTube is a modern movie discovery platform built with Next.js, featuring real-time recommendations, vector search, and an interactive user interface powered by KendoUI components.
+
+## 📺 Movie list
+![Movie List](./list.png)
+## Movie Details with AI powered recommendations
+![Movie Details](./details.png)
+## AI powered comments analysis
+![AI powered comments](./comment-analysis.png)
+## Mobile responsive
+![Mobile](./mobile.png)
 
 ## 🌟 Features
 
@@ -58,7 +67,7 @@ WeTube is a modern movie discovery platform built with Next.js, featuring real-t
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/wetube.git
+   git clone https://github.com/herberthk/wetube.git
    cd wetube
    ```
 
@@ -179,8 +188,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## 📞 Support
 
-For support, email support@wetube.com or join our Slack channel.
+For support, email herberthk100@gmail.com or [Linkedin](https://www.linkedin.com/in/kavuma-herbert-559496111/).
 
 ---
 
-Built with ❤️ by [Your Name]
+Built with ❤️ by Herbert
