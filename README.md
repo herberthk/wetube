@@ -85,7 +85,6 @@ WeTube is a modern movie discovery platform built with Next.js, featuring real-t
    ```env
    MONGODB_URI=your_mongodb_uri
    GOOGLE_API_KEY=your_google_ai_api_key
-   UPSTASH_REDIS_URL=your_redis_url
    UPSTASH_REDIS_TOKEN=your_redis_token
    ```
 
